@@ -1,0 +1,421 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navTop {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+section {
+    display: flex;
+    margin: 30px 20px;
+    gap: 20px;
+    justify-content: space-between;
+}
+/*----------------WAITING LIST----------------*/
+.left {
+    flex: 6;
+    margin-right: 40px;
+}
+
+.tableTop {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.playersTable,
+.card {
+    border: 2px solid #C95D4D;
+    border-radius: 15px;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+td {
+    text-align: start;
+    font-weight: 300;
+}
+
+.bolder {
+    font-weight: bold;
+}
+
+.trash {
+    display: none;
+}
+
+/*-----------------RIGHT SIDE-----------------*/
+.right {
+    flex: 5;
+    min-width: 300px;
+}
+
+/*----------------ANNOUNCEMENTS----------------*/
+
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cardTitle {
+    padding: 10px;
+    text-align: center;
+}
+
+.cardDate {
+    display: flex;
+    padding: 0 20px;
+    font-weight: 300;
+    justify-content: space-between;
+}
+
+.cardInfo {
+    background-color: #FFDCD1;
+    font-weight: 300;
+    text-align: justify;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/*----------------COURTS----------------*/
+.courts {
+    margin: 20px 30px -20px 30px;
+    text-align: center;
+}
+
+.courtsTitle {
+    margin-bottom: 30px;
+}
+
+.cardsGroup {
+    display: grid;
+    grid-template-columns: repeat(4, 0.1fr);
+    justify-content: space-between;
+}
+
+.cardsGroup .courtsCard {
+    width: 110px;
+    height: 180px;
+}
+
+.courtsCard {
+    box-shadow: 0 0 3px 3px #f20000b3;
+    border: 10px solid white;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cardContent {
+    width: 100%;
+    height: 100%;
+    border: 5px solid black;
+    border-radius: 4px;
+}
+
+.cardContent div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 33%;
+}
+
+.cardContent div:nth-child(2) span {
+    width: 130%;
+    margin: 0 -15px;
+    padding: 3px 0;
+    background-color: #C95D4D;
+    color: white;
+    border-radius: 4px;
+}
+
+/*----------------BUTTON----------------*/
+.button {
+    margin: 0 -10px;
+    position: relative;
+}
+
+button {
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+
+    border-radius: 4px;
+    background-color: #C95D4D;
+}
+
+/*----------------RESPONSIVE TO THE WEB----------------*/
+@media screen and (max-width: 1370px) {
+    .cardsGroup {
+        grid-template-columns: repeat(3, 0.1fr);
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .cardsGroup .courtsCard {
+        width: 90px;
+        height: 150px;
+    }
+
+    .cardContent div {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 996px) {
+
+    .cardsGroup {
+        grid-template-columns: repeat(2, 0.2fr);
+    }
+
+    .cardsGroup .courtsCard {
+        width: 110px;
+        height: 180px;
+    }
+
+    .cardContent div {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    tr .web {
+        display: none;
+    }
+
+    .compass {
+        display: none;
+    }
+
+    .cardTitle {
+        display: contents;
+    }
+
+    .cardTitle h5 {
+        margin: 20px 10px;
+    }
+}
+
+/*----------------FOR MOBILE DEVICES----------------*/
+@media screen and (max-width: 576px) {
+
+    section {
+        display: block;
+        grid-template-columns: max-content;
+        position: relative;
+    }
+
+    .mobile {
+        display: unset;
+    }
+
+/*----------------DISPLAY NONE----------------*/    
+    .courts {
+        display: none;
+    }
+
+    .announcements {
+        display: none;
+    }
+
+    .expanded {
+        display: none;
+    }
+
+    .web {
+        display: none;
+    }
+/*----------------NAVBAR----------------*/  
+    nav {
+        grid-template-columns: max-content;
+        background: linear-gradient(180deg, #B74534 0%, #C95D4D 100%);
+        border-radius: 0px 0px 15px 15px;
+
+    }
+
+    .navTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+
+    }
+
+    .navItem {
+        cursor: pointer;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 6px 9px 6px 6px;
+        border-radius: 4px;
+    }
+
+    .searchInput {
+        border: none;
+    }
+
+/*----------------LEFT SIDE----------------*/
+    .left {
+        margin: 0;
+    }
+
+    .tableTop {
+        text-align: start;
+        display: flex;
+        margin: 10px 10px;
+        justify-content: space-between;
+    }
+
+    td {
+        font-size: 12px;
+    }
+
+    .trash {
+        display: inline;
+    }
+
+    .borderPlayerTable {
+        position: relative;
+    }
+
+    .borderText {
+        text-decoration-line: underline;
+        background-color: white;
+        color: #C95D4D;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 16px;
+        position: absolute;
+        display: flex;
+        bottom: -1.6%;
+        left: 20px;
+        padding: 0 10px;
+    }
+
+    .arrowDown {
+        background-color: white;
+        position: absolute;
+        display: flex;
+        bottom: -1.9%;
+        right: 30px;
+        padding: 0 10px;
+    }
+
+    .arrowDown img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .right .compass {
+        display: flex;
+        position: relative;
+    }
+
+    .right .compassIcon{
+        width: 45px;
+        height: 50px;
+        top: 50px;
+        right: 10px;
+        position: absolute;
+    }
+
+/*----------------COURTS GROUP----------------*/
+    .mobileCourtsGroup {
+        margin-top: 40px;
+        display: grid;
+        height: 340px;
+        grid-template-columns: auto auto auto auto;
+        border-radius: 15px;
+        background-color: #F8F8F8;
+        align-items: center;
+        padding-left: 15%;
+        padding-right: 12%;
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+   
+    .mobileCard {
+        width: 50px;
+        height: 100px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 2px 2px #f20000b3;
+        padding: 2px;
+        display: grid;
+
+    }
+
+    .mobileCard>div {
+        border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+
+    .deactiveMobileCard {
+        background: #F3F3F3;
+        filter: blur(0.8px);
+        box-shadow: none;
+    }
+
+    .item1,
+    .item5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .item1,
+    .item2,
+    .item5,
+    .item6 {
+        padding: 6px 0;
+    }
+
+    .item3,
+    .teim4 {
+        padding: -3px 0px;
+    }
+
+    .item2,
+    .item6 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+
+    .item3,
+    .item4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+/*----------------BUTTON----------------*/
+    .button {
+        width: 100%;
+        position: relative;
+        bottom: -30px;
+        left: 10px;
+        margin-bottom: 80px;
+    }
+
+    button{
+        font-size: 16px;
+        padding: 9px 20px;
+        height: min-content;
+    }
+
+}
