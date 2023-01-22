@@ -1,4 +1,4 @@
-# Turquoise-Voice-Hiring-Page
+# Turquoise-Voice-Hiring-Task
 
 ## -Web version
 ![web-page](https://user-images.githubusercontent.com/79373411/213932778-1d0ff6e0-ed13-4087-b63d-091de4265ddc.png)
