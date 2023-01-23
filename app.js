@@ -167,9 +167,9 @@ function buildTable(data) {
             <tr>
                 <td class="web"><img src="${data[i].type}"/></td>
                 <td class="web"><img src="${data[i].rating}"/></td>
-                <td>${data[i].player1.join('<br/><br/>')}</td>
-                <td>${data[i].player2.join('<br/><br/>')}</td>
-                <td> <span class="bolder">${data[i].time} mins <img class="trash" src="./icons/Trash.png"/><span/></td>
+                <td >${data[i].player1.join('<br/><br/>')}</td>
+                <td >${data[i].player2.join('<br/><br/>')}</td>
+                <td> <span class="bolder">${data[i].time}<span/><span class="soft"> mins<span/> <img class="trash" src="./icons/Trash.png"/></td>
             </tr>    
             `
         }
@@ -178,9 +178,9 @@ function buildTable(data) {
             <tr>
                 <td class="web"><img src="${data[i].type}"/></td>
                 <td class="web"><span class="bolder">${data[i].rating}<span/></td>
-                <td>${data[i].player1.join('<br/><br/>')}</td>
-                <td>${data[i].player2.join('<br/><br/>')}</td>
-                <td> <span class="bolder">${data[i].time} mins <img class="trash" src="./icons/Trash.png"/><span/></td>
+                <td >${data[i].player1.join('<br/><br/>')}</td>
+                <td >${data[i].player2.join('<br/><br/>')}</td>
+                <td><span class="bolder">${data[i].time}<span/><span class="soft"> mins<span/> <img class="trash" src="./icons/Trash.png"/></td>
             </tr>    
             `
         }
@@ -196,6 +196,8 @@ function expandTable() {
     buildTable(expandedlist)
     document.getElementById('expandText').innerHTML = ""
     document.getElementById('expandArrow').innerHTML = ""
+    document.getElementById('expandArrow').classList.remove('arrowDown');
+
 }
 
 function refresh() {
@@ -206,20 +208,20 @@ function buildCard(data) {
     var cards = document.getElementById('cards')
     for (var i = 0; i < data.length; i++) {
         var card = `
-        <div class="courtsCard">
-            <div class="cardContent">  
-              <div className="nameGroup1">
-                    Roderick D. <br/>
-                    Devon M.                 
-              </div>
-              <div className="timeButton">
-                   <span>12 min.</span> 
-              </div>
-              <div className="nameGroup2">
-                    Rick W. <br/>
-                    Dori D.
-              </div>
-            </div>
+        <div class="courtsCard">     
+                <div class="cardContent">  
+                <div className="nameGroup1">
+                        Roderick D. <br/>
+                        Devon M.                 
+                </div>
+                <div className="timeButton">
+                    <span>12 min.</span> 
+                </div>
+                <div className="nameGroup2">
+                        Rick W. <br/>
+                        Dori D.
+                </div>
+                </div>
         </div>
         `
         cards.innerHTML += card
