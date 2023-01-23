@@ -196,6 +196,8 @@ function expandTable() {
     buildTable(expandedlist)
     document.getElementById('expandText').innerHTML = ""
     document.getElementById('expandArrow').innerHTML = ""
+    document.getElementById('expandArrow').classList.remove('arrowDown');
+
 }
 
 function refresh() {
@@ -206,20 +208,20 @@ function buildCard(data) {
     var cards = document.getElementById('cards')
     for (var i = 0; i < data.length; i++) {
         var card = `
-        <div class="courtsCard">
-            <div class="cardContent">  
-              <div className="nameGroup1">
-                    Roderick D. <br/>
-                    Devon M.                 
-              </div>
-              <div className="timeButton">
-                   <span>12 min.</span> 
-              </div>
-              <div className="nameGroup2">
-                    Rick W. <br/>
-                    Dori D.
-              </div>
-            </div>
+        <div class="courtsCard">     
+                <div class="cardContent">  
+                <div className="nameGroup1">
+                        Roderick D. <br/>
+                        Devon M.                 
+                </div>
+                <div className="timeButton">
+                    <span>12 min.</span> 
+                </div>
+                <div className="nameGroup2">
+                        Rick W. <br/>
+                        Dori D.
+                </div>
+                </div>
         </div>
         `
         cards.innerHTML += card
