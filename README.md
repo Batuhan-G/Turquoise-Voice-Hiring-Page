@@ -1,10 +1,13 @@
 # Turquoise-Voice-Hiring-Task
 
 ## -Web version
-![web-page](https://user-images.githubusercontent.com/79373411/213932778-1d0ff6e0-ed13-4087-b63d-091de4265ddc.png)
+
+![Ekran Resmi 2023-01-23 22 00 16](https://user-images.githubusercontent.com/79373411/214126879-c1b12a98-5f8e-437e-b3e3-961ea5320bb8.png)
 
 ## -Mobile version
 
-![mobile-1](https://user-images.githubusercontent.com/79373411/213932850-5f9afbc6-e24f-483b-9d31-79f4616cff8d.png)
+![Ekran Resmi 2023-01-23 21 55 44](https://user-images.githubusercontent.com/79373411/214128030-cc7e7331-947f-489d-bad7-2456b67586dd.png)
 
-![mobile-2](https://user-images.githubusercontent.com/79373411/213933080-767c9359-6e70-4cb5-a0dc-2e3bfe531fea.png)
+  The user can expand the waiting list by pressing the **'Show other info'** and **refresh** the page with the refresh button located above whenever he/she wants.
+  
+![Ekran Resmi 2023-01-23 21 56 23](https://user-images.githubusercontent.com/79373411/214127959-07e55fcd-e36f-438b-887a-1580ef6ed83b.png)
