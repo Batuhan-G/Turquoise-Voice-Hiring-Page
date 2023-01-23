@@ -434,7 +434,7 @@ margin-bottom: 90px;        /*ToDo*/
     th:nth-child(3),
     td:nth-child(4),
     th:nth-child(4) {
-        padding-left: 10px;
+        padding-left: 7px;
         width: 120px;
     }
 
@@ -502,34 +502,29 @@ margin-bottom: 90px;        /*ToDo*/
     .right .compassIcon {
         width: 45px;
         height: 50px;
-        top: 30px;
-        right: 10px;
+        top: 12px;
+        right: 7px;
         position: absolute;
     }
 
     /*----------------COURTS GROUP----------------*/
     .mobileCourtsGroup {
-        margin-top: 15px;
+        margin-top: 5px;
         display: grid;
-        height: 340px;
-        grid-template-columns: auto auto auto auto;
+        height: 285px;
+        grid-template-columns: repeat(4,0.24fr);
         border-radius: 15px;
         background-color: #F8F8F8;
         align-items: center;
-        padding-left: 15%;
-        padding-right: 12%;
-        padding-top: 15%;
-        padding-bottom: 15%;
+        padding: 30px 10px 10px 40px;
     }
 
     .mobileCard {
-        width: 50px;
-        height: 100px;
-        margin-bottom: 40px;
+        width: 44px;
+        height: 80px;
         box-shadow: 0 0 2px 2px #f20000b3;
-        padding: 2px;
+        padding: 3px;
         display: grid;
-
     }
 
     .mobileCard>div {
@@ -552,12 +547,7 @@ margin-bottom: 90px;        /*ToDo*/
     .item2,
     .item5,
     .item6 {
-        padding: 6px 0;
-    }
-
-    .item3,
-    .teim4 {
-        padding: -3px 0px;
+        padding: 8px 0;
     }
 
     .item2,
@@ -577,7 +567,7 @@ margin-bottom: 90px;        /*ToDo*/
     .button {
         width: 100%;
         position: relative;
-        bottom: -30px;
+        bottom: -15px;
         left: 10px;
         margin-bottom: 80px;
     }
