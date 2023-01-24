@@ -36,7 +36,9 @@ section {
 
 .tableTitle p {
     font-size: 24px;
+    font-weight: 500;
 }
+
 
 .playersTable,
 .card {
@@ -50,23 +52,20 @@ table {
 }
 
 th {
-    padding: 8px;
-}
-
-th {
     font-size: 20px;
-    padding: 20px 1px 0 20px;
+    padding: 20px 0 23px 20px;
     align-self: end;
     color: #222222;
+    font-weight: 500;
 }
 
-th:nth-child(-n+2),
-th:nth-child(-n+2) {
-    padding-left: 20px;
-    max-width: 70px;
+th pre{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     align-items: center;
     text-align: center;
 }
+
 
 
 #waitingList tr:nth-child(odd) {
@@ -82,7 +81,18 @@ tr,
 .soft {
     text-align: center;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+td:nth-child(2) {
+    font-weight: 700;
+}
+
+th:nth-child(2),
+td:nth-child(2)
+ {
+    width: 130px !important;
+    padding-right: 10px !important;
 }
 
 td:nth-child(3),
@@ -108,8 +118,16 @@ th {
     text-align: left;
 }
 
+th:nth-child(3) {
+    padding:30px 0 0 30px;
+}
+
+
 th:nth-child(5) {
     font-size: 24px;
+    min-width: 100px;
+    text-align: end;
+    padding:30px 20px 0 0;
 }
 
 .bolder {
@@ -239,7 +257,8 @@ button {
     font-size: 24px;
     color: white;
     cursor: pointer;
-margin-bottom: 90px;        /*ToDo*/
+    margin-bottom: 90px;
+    /*ToDo*/
     border-radius: 4px;
     background-color: #C95D4D;
 }
@@ -250,7 +269,7 @@ margin-bottom: 90px;        /*ToDo*/
 
 @media screen and (max-width: 1650px) {
     .cardsGroup {
-        margin: 0 30px 0 30px;   
+        margin: 0 30px 0 30px;
         column-gap: 20px;
     }
 }
@@ -273,8 +292,8 @@ margin-bottom: 90px;        /*ToDo*/
 @media screen and (max-width: 1100px) {
 
     .cardsGroup {
-        grid-template-columns: repeat(2,0.4fr);
-        margin: 0 30px 0 30px;   
+        grid-template-columns: repeat(2, 0.4fr);
+        margin: 0 30px 0 30px;
         column-gap: 10px;
     }
 
@@ -288,7 +307,7 @@ margin-bottom: 90px;        /*ToDo*/
 
 @media screen and (max-width: 796px) {
 
-   
+
     .cardsGroup .courtsCard {
         width: 110px;
         height: 180px;
@@ -383,7 +402,17 @@ margin-bottom: 90px;        /*ToDo*/
 
     /*----------------LEFT SIDE----------------*/
     .left {
-        margin: 0;
+        margin: auto;
+    }
+
+    .playersTable {
+        border: 2px solid #C95D4D;
+        max-width: 365px;
+        min-height: 210px;
+    }
+
+    table {
+        table-layout: fixed;
     }
 
     .tableTop {
@@ -410,29 +439,40 @@ margin-bottom: 90px;        /*ToDo*/
     }
 
     th {
-        padding: 10px 0px 5px;
+        padding: 10px 0 5px 9px !important;
         font-size: 14px;
+        width: 80px;
     }
 
     th:nth-child(5) {
-        padding-left: 20px;
         font-size: 14px;
+        margin-right: 14px;
+        font-weight: 500
     }
 
 
     td:nth-child(5),
     th:nth-child(5) {
         float: right;
-        width: 120px;
+        max-width: 100px;
     }
 
     tr:nth-child(3) {
         font-weight: 500;
     }
 
+    th:nth-child(3){
+        padding-left: 13px;
+        width: 120px;
+        font-weight: 500;
+    }
+
+    td:nth-child(4){
+        width: 120px;
+        padding-left: 0px;
+    }
+
     td:nth-child(3),
-    th:nth-child(3),
-    td:nth-child(4),
     th:nth-child(4) {
         padding-left: 7px;
         width: 120px;
@@ -446,6 +486,11 @@ margin-bottom: 90px;        /*ToDo*/
     td {
         padding: 5px 0;
         font-size: 12px;
+        width: 80px;
+    }
+
+    td .bolder{
+        margin-left: 12px;
     }
 
     .bolder,
@@ -454,7 +499,7 @@ margin-bottom: 90px;        /*ToDo*/
     }
 
     .trash {
-        padding-left: 10px;
+        padding-left: 5px;
         display: inline;
         width: 13.5px;
         height: 15.7px;
@@ -512,7 +557,7 @@ margin-bottom: 90px;        /*ToDo*/
         margin-top: 5px;
         display: grid;
         height: 285px;
-        grid-template-columns: repeat(4,0.24fr);
+        grid-template-columns: repeat(4, 0.24fr);
         border-radius: 15px;
         background-color: #F8F8F8;
         align-items: center;
