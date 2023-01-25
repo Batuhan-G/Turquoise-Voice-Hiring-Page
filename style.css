@@ -59,11 +59,11 @@ th {
     font-weight: 500;
 }
 
-th:nth-child(1) pre{
+th:nth-child(1) pre {
     text-align: center;
 }
 
-th pre{
+th pre {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     text-align: start;
@@ -93,8 +93,7 @@ td:nth-child(2) {
 }
 
 th:nth-child(2),
-td:nth-child(2)
- {
+td:nth-child(2) {
     text-align: start;
     padding-left: 30px;
     max-width: 100px !important;
@@ -125,9 +124,9 @@ th:nth-child(4) {
     min-width: 160px
 }
 
-th:nth-child(3){
+th:nth-child(3) {
     min-width: 160px;
-    padding:30px 0 0 46px;
+    padding: 30px 0 0 46px;
 }
 
 
@@ -135,7 +134,7 @@ th:nth-child(5) {
     font-size: 24px;
     min-width: 160px;
     text-align: end;
-    padding:30px 20px 0 0;
+    padding: 30px 20px 0 0;
 }
 
 
@@ -216,7 +215,8 @@ th:nth-child(5) {
 .courtsCard {
     position: relative;
     z-index: 1;
-    height: 203px;  /* I have given the most appropriate size to the design in the figma */
+    height: 203px;
+    /* I have given the most appropriate size to the design in the figma */
     width: 108px;
     box-shadow: 0 0 3px 3px #f20000b3;
     border: 10px solid white;
@@ -226,7 +226,7 @@ th:nth-child(5) {
     text-align: center;
 }
 
-.courtsCard::before{
+.courtsCard::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -235,7 +235,7 @@ th:nth-child(5) {
     left: 0;
     right: 0;
     background: url("./icons/Background.png") center center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
 }
 
 .courtsCard div {
@@ -251,12 +251,12 @@ th:nth-child(5) {
 }
 
 .courtsCard div:nth-child(1) {
-   margin-top: 14px;
+    margin-top: 14px;
 }
 
 .courtsCard div:nth-child(3) {
     height: 20%;
- }
+}
 
 .courtsCard div:nth-child(2) span {
     z-index: 3;
@@ -310,7 +310,7 @@ button {
         grid-template-columns: repeat(3, 0.3fr);
         margin: 0 20px 0 20px;
     }
-} 
+}
 
 @media screen and (max-width: 1390px) {
     .cardsGroup {
@@ -406,7 +406,7 @@ button {
     }
 
     /*app.js side for selectedItem*/
-    .red{
+    .red {
         color: #C95D4D;
     }
 
@@ -467,13 +467,13 @@ button {
         font-weight: 500;
     }
 
-    th:nth-child(3){
+    th:nth-child(3) {
         padding-left: 13px;
         width: 120px;
         font-weight: 500;
     }
 
-    td:nth-child(4){
+    td:nth-child(4) {
         width: 120px;
         padding-left: 0px;
     }
@@ -495,7 +495,7 @@ button {
         width: 80px;
     }
 
-    td .bolder{
+    td .bolder {
         margin-left: 12px;
         font-size: 16;
     }
@@ -564,55 +564,26 @@ button {
         margin-top: 5px;
         display: grid;
         height: 285px;
-        grid-template-columns: repeat(4, 0.24fr);
+        grid-template-columns: 44px 44px 44px 44px;
+        justify-content: space-between;
+        grid-column: 23px;
         border-radius: 15px;
         background-color: #F8F8F8;
         align-items: center;
-        padding: 30px 10px 10px 40px;
+        padding: 30px 50px 10px 50px;
     }
 
     .mobileCard {
-        width: 44px;
         height: 80px;
         box-shadow: 0 0 2px 2px #f20000b3;
-        padding: 3px;
         display: grid;
-    }
-
-    .mobileCard>div {
-        border: 1px solid rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-items: center;
     }
 
     .deactiveMobileCard {
-        background: #F3F3F3;
-        filter: blur(0.8px);
+        background-repeat: no-repeat;
         box-shadow: none;
-    }
-
-    .item1,
-    .item5 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
-    .item1,
-    .item2,
-    .item5,
-    .item6 {
-        padding: 8px 0;
-    }
-
-    .item2,
-    .item6 {
-        grid-column-start: 3;
-        grid-column-end: 5;
-    }
-
-
-    .item3,
-    .item4 {
-        grid-column-start: 1;
-        grid-column-end: 5;
     }
 
     /*----------------BUTTON----------------*/

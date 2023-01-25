@@ -192,12 +192,7 @@ function buildMobileCard(data) {
     for (var i = 0; i < activeCards; i++) {
         var card = `
         <div class="mobileCard">
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="item3"></div>
-            <div class="item4"></div>
-            <div class="item5"></div>
-            <div class="item6"></div>
+            <img src="./icons/BackgroundMobile.png" alt="" />
         </div>
         `
         cards.innerHTML += card
@@ -206,12 +201,7 @@ function buildMobileCard(data) {
     for (var i = 0; i < deactiveCards; i++) {
         var card = `
         <div class="mobileCard deactiveMobileCard">
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="item3"></div>
-            <div class="item4"></div>
-            <div class="item5"></div>
-            <div class="item6"></div>
+            <img src="./icons/BackgroundBlur.png" alt="" />
         </div>
         `
         cards.innerHTML += card
