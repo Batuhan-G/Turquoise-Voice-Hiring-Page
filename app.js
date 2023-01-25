@@ -156,25 +156,25 @@ function expandTable() {
 function refresh() {
     window.location.reload()
 }
-
 function buildCard(data) {
     var cards = document.getElementById('cards')
     for (var i = 0; i < data.length; i++) {
         var card = `
-        <div class="courtsCard">     
-                <div class="cardContent">  
-                <div className="nameGroup1">
-                        Roderick D. <br/>
-                        Devon M.                 
-                </div>
-                <div className="timeButton">
-                    <span>12 min.</span> 
-                </div>
-                <div className="nameGroup2">
-                        Rick W. <br/>
-                        Dori D.
-                </div>
-                </div>
+        <div className="border">
+            <div class="courtsCard">     
+                    
+                    <div className="nameGroup1">
+                            Roderick D.<br/>
+                            Devon M.                 
+                    </div>
+                    <div className="timeButton">
+                        <span>12 min.</span> 
+                    </div>
+                    <div className="nameGroup2">
+                            Rick W. <br/>
+                            Dori D.
+                    </div>
+            </div>
         </div>
         `
         cards.innerHTML += card
