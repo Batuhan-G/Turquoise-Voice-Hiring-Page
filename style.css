@@ -36,7 +36,9 @@ section {
 
 .tableTitle p {
     font-size: 24px;
+    font-weight: 500;
 }
+
 
 .playersTable,
 .card {
@@ -50,23 +52,23 @@ table {
 }
 
 th {
-    padding: 8px;
-}
-
-th {
     font-size: 20px;
-    padding: 20px 1px 0 20px;
+    padding: 20px 0 23px 20px;
     align-self: end;
     color: #222222;
+    font-weight: 500;
 }
 
-th:nth-child(-n+2),
-th:nth-child(-n+2) {
-    padding-left: 20px;
-    max-width: 70px;
-    align-items: center;
+th:nth-child(1) pre {
     text-align: center;
 }
+
+th pre {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: start;
+}
+
 
 
 #waitingList tr:nth-child(odd) {
@@ -82,25 +84,35 @@ tr,
 .soft {
     text-align: center;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
-td:nth-child(3),
-th {
+td:nth-child(2) {
+    font-weight: 700;
+    padding-left: 40px !important;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    text-align: start;
+    padding-left: 30px;
+    max-width: 100px !important;
+}
+
+td:nth-child(3) {
     text-align: left;
+    padding-left: 45px;
+}
+
+td:nth-child(4) {
+    padding-left: 30px;
 }
 
 td:nth-child(3),
 th:nth-child(3),
 td:nth-child(4),
 th:nth-child(4) {
-    padding-left: 30px;
     width: 190px;
-}
-
-td:nth-child(5),
-th:nth-child(5) {
-    width: 200px;
 }
 
 td:nth-child(4),
@@ -108,9 +120,23 @@ th {
     text-align: left;
 }
 
+th:nth-child(4) {
+    min-width: 160px
+}
+
+th:nth-child(3) {
+    min-width: 160px;
+    padding: 30px 0 0 46px;
+}
+
+
 th:nth-child(5) {
     font-size: 24px;
+    min-width: 160px;
+    text-align: end;
+    padding: 30px 20px 0 0;
 }
+
 
 .bolder {
     color: #414141;
@@ -182,42 +208,62 @@ th:nth-child(5) {
     display: grid;
     grid-template-columns: 110px 110px 110px 110px;
     justify-content: space-between;
-    column-gap: 50px;
+    column-gap: 55px;
 
-}
-
-.cardsGroup .courtsCard {
-    height: 200px;
 }
 
 .courtsCard {
+    position: relative;
+    z-index: 1;
+    height: 203px;
+    /* I have given the most appropriate size to the design in the figma */
+    width: 108px;
     box-shadow: 0 0 3px 3px #f20000b3;
     border: 10px solid white;
     border-radius: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 56px;
     font-size: 14px;
     text-align: center;
 }
 
-
-.cardContent {
-    border: 5px solid black;
-    border-radius: 4px;
-    background-image: url("./icons/Background.png");
-
+.courtsCard::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("./icons/Background.png") center center;
+    background-repeat: no-repeat;
 }
 
-.cardContent div {
+.courtsCard div {
+    background-color: #ffffffe3;
+    z-index: -1;
     display: flex;
+    margin: auto;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    height: 32%;
+    width: 73%;
+    height: 33%;
 }
 
-.cardContent div:nth-child(2) span {
-    width: 130%;
-    margin: 0 -5px;
-    padding: 3px 0;
+.courtsCard div:nth-child(1) {
+    margin-top: 14px;
+}
+
+.courtsCard div:nth-child(3) {
+    height: 20%;
+}
+
+.courtsCard div:nth-child(2) span {
+    z-index: 3;
+    width: 105px;
+    height: 27px;
+    margin: -23px -25px 0 -25px;
+    padding: 6px 0 0 0;
     background-color: #C95D4D;
     color: white;
     border-radius: 4px;
@@ -229,7 +275,7 @@ th:nth-child(5) {
 
 /*----------------BUTTON----------------*/
 .button {
-    margin: 0 -10px;
+    margin: 18 -10px 0 -10px;
     position: relative;
 }
 
@@ -239,7 +285,8 @@ button {
     font-size: 24px;
     color: white;
     cursor: pointer;
-margin-bottom: 90px;        /*ToDo*/
+    margin-bottom: 90px;
+    /*ToDo*/
     border-radius: 4px;
     background-color: #C95D4D;
 }
@@ -248,9 +295,9 @@ margin-bottom: 90px;        /*ToDo*/
 
 
 
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1680px) {
     .cardsGroup {
-        margin: 0 30px 0 30px;   
+        margin: 0 30px 0 30px;
         column-gap: 20px;
     }
 }
@@ -258,47 +305,19 @@ margin-bottom: 90px;        /*ToDo*/
 
 
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1570px) {
     .cardsGroup {
         grid-template-columns: repeat(3, 0.3fr);
+        margin: 0 20px 0 20px;
     }
-
-    .cardContent div {
-        font-size: 12px;
-    }
-
-
 }
 
-@media screen and (max-width: 1100px) {
-
+@media screen and (max-width: 1390px) {
     .cardsGroup {
-        grid-template-columns: repeat(2,0.4fr);
-        margin: 0 30px 0 30px;   
-        column-gap: 10px;
+        grid-template-columns: repeat(2, 0.3fr);
     }
-
-    /* .cardsGroup .courtsCard {
-        width: 90px;
-        height: 150px;
-    }
- */
-
 }
 
-@media screen and (max-width: 796px) {
-
-   
-    .cardsGroup .courtsCard {
-        width: 110px;
-        height: 180px;
-    }
-
-    .cardContent div {
-        font-size: 14px;
-    }
-
-}
 
 @media screen and (max-width:768px) {
 
@@ -383,7 +402,22 @@ margin-bottom: 90px;        /*ToDo*/
 
     /*----------------LEFT SIDE----------------*/
     .left {
-        margin: 0;
+        margin: auto;
+    }
+
+    /*app.js side for selectedItem*/
+    .red {
+        color: #C95D4D;
+    }
+
+    .playersTable {
+        border: 2px solid #C95D4D;
+        max-width: 365px;
+        min-height: 210px;
+    }
+
+    table {
+        table-layout: fixed;
     }
 
     .tableTop {
@@ -410,29 +444,41 @@ margin-bottom: 90px;        /*ToDo*/
     }
 
     th {
-        padding: 10px 0px 5px;
+        padding: 10px 0 5px 9px !important;
         font-size: 14px;
+        width: 80px;
     }
 
     th:nth-child(5) {
-        padding-left: 20px;
         font-size: 14px;
+        margin-right: 14px;
+        font-weight: 500
     }
 
 
     td:nth-child(5),
     th:nth-child(5) {
         float: right;
-        width: 120px;
+        font-size: 12;
+        min-width: 100px;
     }
 
     tr:nth-child(3) {
         font-weight: 500;
     }
 
+    th:nth-child(3) {
+        padding-left: 13px;
+        width: 120px;
+        font-weight: 500;
+    }
+
+    td:nth-child(4) {
+        width: 120px;
+        padding-left: 0px;
+    }
+
     td:nth-child(3),
-    th:nth-child(3),
-    td:nth-child(4),
     th:nth-child(4) {
         padding-left: 7px;
         width: 120px;
@@ -444,17 +490,23 @@ margin-bottom: 90px;        /*ToDo*/
     }
 
     td {
-        padding: 5px 0;
+        padding: 7px 0;
         font-size: 12px;
+        width: 80px;
+    }
+
+    td .bolder {
+        margin-left: 12px;
+        font-size: 16;
     }
 
     .bolder,
     .soft {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .trash {
-        padding-left: 10px;
+        padding-left: 5px;
         display: inline;
         width: 13.5px;
         height: 15.7px;
@@ -512,55 +564,26 @@ margin-bottom: 90px;        /*ToDo*/
         margin-top: 5px;
         display: grid;
         height: 285px;
-        grid-template-columns: repeat(4,0.24fr);
+        grid-template-columns: 44px 44px 44px 44px;
+        justify-content: space-between;
+        grid-column: 23px;
         border-radius: 15px;
         background-color: #F8F8F8;
         align-items: center;
-        padding: 30px 10px 10px 40px;
+        padding: 30px 50px 10px 50px;
     }
 
     .mobileCard {
-        width: 44px;
         height: 80px;
         box-shadow: 0 0 2px 2px #f20000b3;
-        padding: 3px;
         display: grid;
-    }
-
-    .mobileCard>div {
-        border: 1px solid rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-items: center;
     }
 
     .deactiveMobileCard {
-        background: #F3F3F3;
-        filter: blur(0.8px);
+        background-repeat: no-repeat;
         box-shadow: none;
-    }
-
-    .item1,
-    .item5 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-
-    .item1,
-    .item2,
-    .item5,
-    .item6 {
-        padding: 8px 0;
-    }
-
-    .item2,
-    .item6 {
-        grid-column-start: 3;
-        grid-column-end: 5;
-    }
-
-
-    .item3,
-    .item4 {
-        grid-column-start: 1;
-        grid-column-end: 5;
     }
 
     /*----------------BUTTON----------------*/
